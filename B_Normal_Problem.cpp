@@ -1,0 +1,46 @@
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp> 
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+using namespace std;
+#define fast() ios_base::sync_with_stdio(0), cout.tie(0), cin.tie(0)
+#define asort(a) sort(a, a + n)
+#define dsort(a) sort(a, a + n, greater<int>())
+#define all(v) ((v).begin()), ((v).end())
+#define sz(v) ((int)((v).size()))
+#define clr(v, d) memset(v, d, sizeof(v))
+#define rep(i, v) for (int i = 0; i < sz(v); ++i)
+#define lp(i, n) for (int i = 0; i < (int)(n); ++i)
+#define lpi(i, j, n) for (int i = (j); i < (int)(n); ++i)
+#define lpd(i, j, n) for (int i = (j); i >= (int)(n); --i)
+#define MAX 200000009
+typedef vector<int> vi;
+typedef vector<long long> vii;
+typedef long long ll;
+typedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update> indexed_set;
+typedef tree<int , null_type ,  less_equal<int> , rb_tree_tag , tree_order_statistics_node_update> ordered_multiset;
+int mini=1e9;
+const ll MAx = 1000001;
+
+void solution(){
+ string s,s1=""; cin>>s;
+ int sz=s.length();
+ for(int i=0;i<sz;i++){
+    if(s[i]=='p') s1+='q';
+    else if(s[i]=='q') s1+='p';
+    else s1+='w';
+ }
+ for (int i = sz-1; i >= 0; i--)
+ {
+    cout<<s1[i];
+ }
+ cout<<endl;
+}
+
+int main()
+{
+    fast();
+    int t; cin>>t;
+    while(t--)
+    solution();
+}
